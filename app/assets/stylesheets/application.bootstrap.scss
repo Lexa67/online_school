@@ -1,2 +1,18 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+.button_active {
+  background-color: rgb(214, 213, 213);
+}
+
+abbr[title="required"] {
+  color: red;
+}
+
+.button_box .btn {
+  margin: 5px;
+}
+
+.button_box .btn:not(:first-child) {
+  margin-left: 5px;
+}
