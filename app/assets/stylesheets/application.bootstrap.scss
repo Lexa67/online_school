@@ -1,5 +1,7 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 
 .button_active {
   background-color: rgb(214, 213, 213);
@@ -16,3 +18,8 @@ abbr[title="required"] {
 .button_box .btn:not(:first-child) {
   margin-left: 5px;
 }
+
+.alert {
+  text-align: center;
+}
+

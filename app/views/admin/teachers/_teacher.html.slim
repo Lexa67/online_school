@@ -1,4 +1,10 @@
-tr 
+tr
+  td
+    .btn-group-vertical role="group"
+      = link_to [:edit, :admin, teacher], class: 'btn btn-primary btn-sm' do
+        i.bi.bi-pencil
+      = link_to [:admin, teacher], class: 'btn btn-danger btn-sm', data: { turbo_method: :delete, turbo_confirm: 'Вы действительно хотите удалить?' } do
+        i.bi.bi-trash-fill
   td= teacher.first_name
   td= teacher.last_name
   td= teacher.description
