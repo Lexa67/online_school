@@ -31,6 +31,12 @@ gem "byebug"
 
 gem 'simple_form'
 
+gem 'kaminari'
+
+gem 'bootstrap5-kaminari-views'
+
+gem "breadcrumbs_on_rails"
+
 
 
 group :development, :test do

@@ -11,3 +11,6 @@ table.table.table-striped
       th Description
 	tbody
 		= render @teachers
+
+= paginate @teachers, theme: 'bootstrap-5', window: 2,
+  pagination_class: "pagination flex-wrap justify-content-center"
