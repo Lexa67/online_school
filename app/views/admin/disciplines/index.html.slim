@@ -1,0 +1,14 @@
+h3 Дисциплины
+
+= link_to '   Добавить дисциплину', new_admin_discipline_path, class: 'btn btn-success col-md-3 offset-md-9 bi bi-clipboard2-plus'
+
+table.table.table-striped
+  thead
+    tr
+      th
+      th Название
+	tbody
+		= render @disciplines
+
+= paginate @disciplines, theme: 'bootstrap-5', window: 2,
+  pagination_class: "pagination flex-wrap justify-content-center"
