@@ -4,5 +4,7 @@ Rails.application.routes.draw do
     
     get 'main/index'
     resources :teachers, except: :show
+    resources :disciplines, except: :show
+
   end
 end
