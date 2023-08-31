@@ -1,6 +1,7 @@
 nav.navbar.navbar-expand-lg.navbar-light.bg-light
   .container-fluid
     = link_to 'Online School', admin_root_path, class: 'navbar-brand'
+  - if current_admin_a
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.me-auto.mb-2.mb-lg-0
         - @main_menu.each do |item, options|
@@ -9,4 +10,9 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
               = options[:name]
               - if options[:active]
                 span.sr-only (current)
-        
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
+            |  #{current_admin_a.first_name} #{current_admin_a.last_name} 
+          ul.dropdown-menu[aria-labelledby="navbarDropdown"]
+            li
+              = link_to 'Выйти', destroy_admin_a_session_path, data: { turbo_method: :delete }, class: 'btn'

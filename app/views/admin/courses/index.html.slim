@@ -1,0 +1,14 @@
+h3 Курсы
+
+= link_to '   Добавить курс', new_admin_course_path, class: 'btn btn-success col-md-3 offset-md-9 bi bi-clipboard2-plus'
+
+table.table.table-striped
+  thead
+    tr
+      th Опции
+      th Название
+	tbody
+		= render @courses
+
+= paginate @courses, theme: 'bootstrap-5', window: 2,
+  pagination_class: "pagination flex-wrap justify-content-center"
