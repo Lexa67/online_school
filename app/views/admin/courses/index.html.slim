@@ -7,8 +7,10 @@ table.table.table-striped
     tr
       th Опции
       th Название
+      th Преподаватель
+      th Дисциплины
 	tbody
-		= render @courses
+		= render @courses.decorate
 
 = paginate @courses, theme: 'bootstrap-5', window: 2,
   pagination_class: "pagination flex-wrap justify-content-center"

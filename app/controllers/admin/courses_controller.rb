@@ -4,7 +4,7 @@ class Admin::CoursesController < Admin::BaseController
   before_action :set_course, only: [:edit, :update, :destroy]
 
   def index
-    @courses = Course.order(id: :desc).page(params[:page])
+    @courses = Course.order(id: :desc).page(params[:page]).per(5)
   end
 
   def new

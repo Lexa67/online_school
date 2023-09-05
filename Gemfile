@@ -41,6 +41,8 @@ gem "devise"
 
 gem 'rails-i18n', '~> 7.0.0'
 
+gem 'draper'
+
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end

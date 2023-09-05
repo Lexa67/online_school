@@ -1,0 +1,15 @@
+h3 Занятия
+
+= link_to '   Добавить занятие', [:new, :admin, @course, :lesson], class: 'btn btn-success col-md-3 offset-md-9 bi bi-clipboard2-plus'
+
+table.table.table-striped
+  thead
+    tr
+      th Опции
+      th Занятие
+      th Описание
+	tbody
+		= render @lessons
+
+= paginate @lessons, theme: 'bootstrap-5', window: 2,
+  pagination_class: "pagination flex-wrap justify-content-center"
