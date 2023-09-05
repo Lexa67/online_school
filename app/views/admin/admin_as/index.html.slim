@@ -1,0 +1,16 @@
+h3 Админы
+
+= link_to '   Добавить Админа', new_admin_admin_a_path, class: 'btn btn-success col-md-3 offset-md-9 bi bi-clipboard2-plus'
+
+table.table.table-striped
+  thead
+    tr
+      th Опции
+      th Email
+      th Имя
+      th Фамилия
+	tbody
+		= render @admin_as
+
+= paginate @admin_as, theme: 'bootstrap-5', window: 2,
+  pagination_class: "pagination flex-wrap justify-content-center"
